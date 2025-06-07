@@ -1,0 +1,269 @@
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36%;
+  height: 56px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  
+  /* Glass effect with theme variables */
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 100%;
+}
+
+.icon-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover .nav-icon {
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  color: var(--text-accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  background: var(--glass-border);
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}
+
+.theme-separator {
+  color: var(--separator-color);
+  font-size: 18px;
+  font-weight: 300;
+  user-select: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.theme-toggle:hover {
+  background: var(--glass-border);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(100, 108, 255, 0.3);
+}
+
+.dark-theme .theme-toggle:focus {
+  box-shadow: 0 0 0 2px rgba(179, 157, 219, 0.5);
+}
+
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced responsive design */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 50%;
+  }
+  
+  .navbar-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 85%;
+    top: 15px;
+    padding: 0 15px;
+    height: 52px;
+  }
+  
+  .navbar-content {
+    gap: 20px;
+  }
+  
+  .icon-content {
+    gap: 12px;
+  }
+  
+  .nav-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .theme-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .theme-separator {
+    font-size: 16px;
+    margin: 0 3px;
+  }
+  
+  .nav-link {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 95%;
+    padding: 0 12px;
+    height: 48px;
+  }
+  
+  .navbar-content {
+    gap: 15px;
+  }
+  
+  .icon-content {
+    gap: 10px;
+  }
+  
+  .nav-link {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+  
+  .nav-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .theme-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .theme-separator {
+    font-size: 14px;
+    margin: 0 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 95%;
+    padding: 0 10px;
+    height: 44px;
+    top: 10px;
+  }
+  
+  .navbar-content {
+    gap: 12px;
+  }
+  
+  .icon-content {
+    gap: 8px;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  
+  .nav-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .theme-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .theme-separator {
+    font-size: 12px;
+    margin: 0 1px;
+  }
+}
+
+/* Very small screens - stack vertically if needed */
+@media (max-width: 360px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .navbar-content,
+  .icon-content {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .navbar-content {
+    gap: 8px;
+    order: 2;
+  }
+  
+  .icon-content {
+    gap: 15px;
+    order: 1;
+  }
+  
+  .theme-separator {
+    font-size: 14px;
+    margin: 0 8px;
+  }
+} 
