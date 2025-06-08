@@ -45,8 +45,8 @@
 }
 
 html {
-  overflow-y: auto;
-  scroll-behavior: smooth;
+  overflow: hidden;
+  height: 100%;
 }
 
 :root {
@@ -87,13 +87,13 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   background-image: url('@bg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -113,9 +113,10 @@ body::before {
 
 #root {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 a {
@@ -167,21 +168,6 @@ button {
   transition: all 0.3s ease;
 }
 
-.dark-theme button {
-  background-color: rgba(150, 100, 200, 0.3);
-  color: var(--text-primary);
-  border-color: rgba(150, 100, 200, 0.5);
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-.dark-theme button:hover {
-  border-color: #B39DDB;
-  background-color: rgba(150, 100, 200, 0.4);
-}
-
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -209,11 +195,6 @@ button:focus-visible {
 
 .dark-theme a:hover {
   color: #D1C4E9 !important;
-}
-
-.dark-theme button {
-  background-color: rgba(150, 100, 200, 0.3) !important;
-  color: var(--text-primary) !important;
 }
 
 /* Mobile-specific background handling */

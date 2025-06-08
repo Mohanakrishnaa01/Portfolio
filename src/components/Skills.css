@@ -11,13 +11,22 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 2.5rem;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.skills-content::-webkit-scrollbar {
+  display: none;
 }
 
 .skills-content h2 {
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--text-accent);
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   line-height: 1.2;
   transition: color 0.3s ease;
 }
@@ -38,8 +47,20 @@
   padding: 1rem;
 }
 
-.skills-category {
+.skills-left {
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.skills-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skills-category {
   background: var(--glass-bg);
   border-radius: 12px;
   padding: 1.5rem;
@@ -60,24 +81,52 @@
 }
 
 .skills-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
 .skill-item {
-  padding: 0.8rem 1.2rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: var(--glass-bg);
   border-radius: 8px;
-  font-size: 1rem;
-  color: var(--text-primary);
+  padding: 0.8rem;
   transition: all 0.3s ease;
   border: 1px solid var(--glass-border);
 }
 
 .skill-item:hover {
-  transform: translateX(5px);
+  transform: translateY(-5px);
   background: var(--glass-border);
+}
+
+/* Light theme specific hover effect */
+:root .skill-item:hover {
+  background: rgb(255 137 216 / 10%);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme specific hover effect */
+.dark-theme .skill-item:hover {
+  background: var(--glass-border);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill-item img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item span {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  text-align: center;
 }
 
 /* Tablet styles */
@@ -105,6 +154,10 @@
   .skills-content p {
     font-size: 1rem;
   }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Mobile styles */
@@ -124,8 +177,8 @@
     gap: 1.5rem;
   }
   
-  .skills-category {
-    width: 100%;
+  .skills-right {
+    gap: 1.5rem;
   }
   
   .skills-content h2 {
@@ -136,6 +189,10 @@
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -162,9 +219,16 @@
     font-size: 1.2rem;
   }
   
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .skill-item {
-    font-size: 0.9rem;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem;
+  }
+
+  .skill-item span {
+    font-size: 0.8rem;
   }
 }
 
@@ -185,4 +249,13 @@
     line-height: 1.3;
     margin-bottom: 1rem;
   }
-} 
+  .skills-content {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .skills-content {
+    padding-bottom: 6rem;
+  }
+}

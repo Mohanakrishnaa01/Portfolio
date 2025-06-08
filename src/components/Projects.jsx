@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: "Fraudulent Credit Card Transaction Detection",
-    description: "Developed a model using SMOTE (class imbalance) and PCA (feature engineering). Tuned Random Forest, Decision Tree, XGBoost with GridSearchCV, enhanced performance using voting and stacking ensembles",
+    description: "Developed a model using SMOTE and PCA for feature engineering. Tuned Random Forest, Decision Tree, XGBoost with GridSearchCV, enhanced performance using voting and stacking ensembles",
     techStack: ["Python", "HP tuning", "Voting", "Stacking"],
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     githubLink: "https://github.com/yourusername/fraud-detection"
