@@ -1,25 +1,26 @@
 import './Skills.css'
+import '../../assets/icons/c.png'
 
 function Skills() {
   const programmingLanguages = [
-    { name: 'C', icon: '/assets/icons/c.png' },
-    { name: 'Java', icon: '/assets/icons/java.png' },
-    { name: 'Python', icon: '/assets/icons/python.png' },
-    { name: 'Ruby', icon: '/assets/icons/ruby.png' },
-    { name: 'JavaScript', icon: '/assets/icons/java-script.png' },
-    { name: 'SQL', icon: '/assets/icons/sql.png' }
+    { name: 'C', icon: '../../assets/icons/c.png' },
+    { name: 'Java', icon: '../../assets/icons/java.png' },
+    { name: 'Python', icon: '../../assets/icons/python.png' },
+    { name: 'Ruby', icon: '../../assets/icons/ruby.png' },
+    { name: 'JavaScript', icon: '../../assets/icons/java-script.png' },
+    { name: 'SQL', icon: '../../assets/icons/sql.png' }
   ];
 
   const frameworks = [
-    { name: 'Node.js', icon: '/assets/icons/node-js.png' },
-    { name: 'Express.js', icon: '/assets/icons/express-js.png' },
-    { name: 'React.js', icon: '/assets/icons/react.png' }
+    { name: 'Node.js', icon: '../../assets/icons/node-js.png' },
+    { name: 'Express.js', icon: '../../assets/icons/express-js.png' },
+    { name: 'React.js', icon: '../../assets/icons/react.png' }
   ];
 
   const tools = [
-    { name: 'GitHub', icon: '/assets/icons/github.png' },
-    { name: 'Postman', icon: '/assets/icons/Postman.png' },
-    { name: 'MySQL', icon: '/assets/icons/MySQL.png' }
+    { name: 'GitHub', icon: '../../assets/icons/github.png' },
+    { name: 'Postman', icon: '../../assets/icons/Postman.png' },
+    { name: 'MySQL', icon: '../../assets/icons/MySQL.png' }
   ];
 
   return (
