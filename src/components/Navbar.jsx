@@ -1,12 +1,12 @@
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import linkedinIcon from '../../assets/icons/linkedin.png'
-import phoneIcon from '../../assets/icons/phone.svg'
-import mailIcon from '../../assets/icons/mail.svg'
-import lightIcon from '../../assets/icons/light.svg'
-import darkIcon from '../../assets/icons/dark.svg'
-import hamburgerIcon from '../../assets/icons/hamburger.png'
+import linkedinIcon from '/icons/linkedin.png'
+import phoneIcon from '/icons/phone.svg'
+import mailIcon from '/icons/mail.svg'
+import lightIcon from '/icons/light.svg'
+import darkIcon from '/icons/dark.svg'
+import hamburgerIcon from '/icons/hamburger.png'
 import { useTheme } from '../contexts/ThemeContext'
 
 function Navbar() {
