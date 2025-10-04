@@ -24,9 +24,9 @@ const projects = [
   },
   {
     title: "Image Identifier",
-    description: "Developed a face identification system using InsightFace and DBSCAN to cluster facial embeddings and detect unique individuals without predefined labels.",
+    description: "Developed a facial clustering application that extracts facial features from query images groups similar faces using DBSCAN clustering algorithm. The system automatically identifies and clusters unique individuals without predefined labels",
     techStack: ["Python", "React", "Django"],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     githubLink: "https://github.com/Mohanakrishnaa01/Face-Recognition"
   }
 ];
